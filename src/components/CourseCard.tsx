@@ -2,22 +2,31 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 interface CourseCardProps {
   title: string;
   description: string;
   icon: React.ReactNode;
   features: string[];
+  isOnline?: boolean;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ title, description, icon, features }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ title, description, icon, features, isOnline = true }) => {
   return (
     <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-lg border-2">
       <CardHeader className="pb-2">
         <div className="w-14 h-14 flex items-center justify-center bg-blue-100 rounded-full mb-4 text-lm-blue">
           {icon}
         </div>
-        <CardTitle className="text-lm-blue text-xl">{title}</CardTitle>
+        <div className="flex items-center justify-between">
+          <CardTitle className="text-lm-blue text-xl">{title}</CardTitle>
+          {isOnline && (
+            <Badge variant="outline" className="bg-blue-50 text-lm-blue border-lm-blue ml-2">
+              Online
+            </Badge>
+          )}
+        </div>
         <CardDescription className="text-gray-500">{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">

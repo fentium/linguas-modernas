@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -23,7 +22,7 @@ const Index = () => {
                 Aprenda Inglês com <span className="text-lm-red">Confiança</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-700">
-                Cursos personalizados para todos os níveis, agora também online!
+                Cursos online para todo o Brasil e presenciais em Copacabana!
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-lm-red hover:bg-red-700 text-white px-6 py-6">
@@ -68,8 +67,8 @@ const Index = () => {
               <p className="text-gray-600">Satisfação</p>
             </div>
             <div className="text-center p-4 opacity-0 animate-fade-in animate-delay-700">
-              <p className="text-3xl md:text-4xl font-bold text-lm-blue">8</p>
-              <p className="text-gray-600">Cursos Disponíveis</p>
+              <p className="text-3xl md:text-4xl font-bold text-lm-blue">80%</p>
+              <p className="text-gray-600">Cursos Online</p>
             </div>
           </div>
         </div>
@@ -127,7 +126,7 @@ const Index = () => {
                   <svg className="text-lm-yellow mr-2 mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.25 4.25L6 11.5L2.75 8.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span>Cursos presenciais em Copacabana e online para todo o Brasil</span>
+                  <span>Maioria dos cursos disponíveis online para todo o Brasil</span>
                 </li>
               </ul>
             </div>
@@ -173,7 +172,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-lm-blue mb-4">Nossos Cursos</h2>
             <div className="w-20 h-1 bg-lm-red mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Oferecemos cursos para todos os níveis e objetivos, com metodologia moderna e focada em resultados.
+              Oferecemos cursos para todos os níveis e objetivos, com metodologia moderna e focada em resultados. A maioria dos cursos disponíveis 100% online!
             </p>
           </div>
           
@@ -192,6 +191,7 @@ const Index = () => {
                 "Professores nativos e brasileiros",
                 "Turmas de no máximo 6 alunos"
               ]}
+              isOnline={true}
             />
             
             <CourseCard 
@@ -208,6 +208,7 @@ const Index = () => {
                 "Redação de emails e relatórios",
                 "Simulações de situações reais"
               ]}
+              isOnline={true}
             />
             
             <CourseCard 
@@ -224,6 +225,7 @@ const Index = () => {
                 "Técnicas específicas para cada exame",
                 "Alto índice de aprovação"
               ]}
+              isOnline={true}
             />
           </div>
           
@@ -235,6 +237,56 @@ const Index = () => {
         </div>
       </section>
       
+      {/* Online Learning CTA Section */}
+      <section className="py-16 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=872&q=80" 
+                alt="Estudante em aula online" 
+                className="rounded-lg shadow-lg"
+              />
+            </div>
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-lm-blue">Estude de Onde Estiver</h2>
+              <p className="text-lg text-gray-700">
+                A maioria dos nossos cursos está disponível 100% online, permitindo que você aprenda inglês de qualquer lugar do Brasil, com a mesma qualidade e atenção personalizada que oferecemos presencialmente em Copacabana.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <svg className="text-lm-blue mr-2 mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.25 4.25L6 11.5L2.75 8.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span>Plataforma interativa e fácil de usar</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="text-lm-blue mr-2 mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.25 4.25L6 11.5L2.75 8.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span>Material didático digital completo</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="text-lm-blue mr-2 mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.25 4.25L6 11.5L2.75 8.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span>Turmas reduzidas para máxima interação</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="text-lm-blue mr-2 mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.25 4.25L6 11.5L2.75 8.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span>Horários flexíveis para maior conveniência</span>
+                </li>
+              </ul>
+              <Button className="bg-lm-blue hover:bg-blue-700 text-white px-6 py-4">
+                Conheça Nossos Cursos Online
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* CTA Section */}
       <section className="py-16 bg-lm-red text-white">
         <div className="container mx-auto px-4 text-center">
@@ -242,7 +294,7 @@ const Index = () => {
             Pronto para começar sua jornada de aprendizado?
           </h2>
           <p className="text-lg mb-8 max-w-2xl mx-auto">
-            Agende uma aula experimental gratuita e descubra como podemos ajudá-lo a alcançar fluência em inglês.
+            Agende uma aula experimental gratuita online ou presencial e descubra como podemos ajudá-lo a alcançar fluência em inglês.
           </p>
           <Button className="bg-white text-lm-red hover:bg-gray-100 hover:text-red-700 px-6 py-6 text-lg">
             Agende sua Aula Grátis
@@ -290,7 +342,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-lm-blue mb-4">Entre em Contato</h2>
             <div className="w-20 h-1 bg-lm-red mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Estamos à disposição para esclarecer suas dúvidas e ajudá-lo a encontrar o curso ideal para você.
+              Estamos à disposição para esclarecer suas dúvidas e ajudá-lo a encontrar o curso ideal para você, seja online ou presencial.
             </p>
           </div>
           
