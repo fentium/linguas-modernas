@@ -43,8 +43,8 @@ const Index = () => {
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 bg-lm-blue text-white p-4 rounded-lg shadow-lg hidden md:block">
-                <p className="font-bold">+15 anos</p>
-                <p>de experiência</p>
+                <p className="font-bold">Desde 2008</p>
+                <p>em Copacabana</p>
               </div>
             </div>
           </div>
@@ -88,11 +88,11 @@ const Index = () => {
               <h3 className="text-2xl font-semibold">Nossa Missão</h3>
               <p className="text-blue-100">
                 Na Línguas Modernas, acreditamos que aprender inglês deve ser uma jornada enriquecedora e personalizada. 
-                Há mais de 15 anos, temos ajudado nossos alunos a conquistarem fluência no idioma através de uma 
+                Desde 2008, temos ajudado nossos alunos a conquistarem fluência no idioma através de uma 
                 metodologia única e professores qualificados.
               </p>
               <p className="text-blue-100">
-                Nosso objetivo é proporcionar um ambiente acolhedor onde cada estudante possa desenvolver suas 
+                Fundada pela Diretora Alessia Traversa, nosso objetivo é proporcionar um ambiente acolhedor onde cada estudante possa desenvolver suas 
                 habilidades linguísticas no seu próprio ritmo, com conteúdos relevantes para suas necessidades pessoais 
                 e profissionais.
               </p>
@@ -122,6 +122,12 @@ const Index = () => {
                     <path d="M13.25 4.25L6 11.5L2.75 8.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                   <span>Plataforma online exclusiva para prática complementar</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="text-lm-yellow mr-2 mt-1 flex-shrink-0" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.25 4.25L6 11.5L2.75 8.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  <span>Cursos presenciais em Copacabana e online para todo o Brasil</span>
                 </li>
               </ul>
             </div>
@@ -301,7 +307,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lm-blue">Nosso Endereço</h4>
-                    <p className="text-gray-600">Av. Rio Branco, 156 - Centro, Rio de Janeiro - RJ, 20040-003</p>
+                    <p className="text-gray-600">Copacabana, Rio de Janeiro - RJ</p>
                   </div>
                 </div>
                 
@@ -313,7 +319,7 @@ const Index = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-lm-blue">Telefone</h4>
-                    <p className="text-gray-600">(21) 9XXXX-XXXX</p>
+                    <p className="text-gray-600">(21) 98173-0250</p>
                   </div>
                 </div>
                 
@@ -346,7 +352,7 @@ const Index = () => {
               
               <div className="mt-8">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.9718521934624!2d-43.18061478503451!3d-22.939348784988077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5e7cfaa27b%3A0xe63d9b447856131d!2sAv.%20Rio%20Branco%2C%20156%20-%20Centro%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020040-003!5e0!3m2!1spt-BR!2sbr!4v1645455985147!5m2!1spt-BR!2sbr" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.118720420697!2d-43.19248678524117!3d-22.970018784981165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd5569988b1b1%3A0x65d71767c45b5465!2sCopacabana%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1619627268375!5m2!1spt-BR!2sbr" 
                   width="100%" 
                   height="300" 
                   style={{ border: 0 }}
