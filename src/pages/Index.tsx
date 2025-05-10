@@ -396,7 +396,7 @@ const Index = () => {
               
               <div className="mt-8">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.118720420697!2d-43.19248678524117!3d-22.970018784981165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd5569988b1b1%3A0x65d71767c45b5465!2sCopacabana%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1619627268375!5m2!1spt-BR!2sbr" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.0265752061876!2d-43.19109038825815!3d-22.974699741770404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd5a3daa9829f%3A0x5eeffbfb94852c01!2sL%C3%ADnguas%20Modernas!5e0!3m2!1spt-BR!2sbr!4v1715533583919!5m2!1spt-BR!2sbr" 
                   width="100%" 
                   height="300" 
                   style={{ border: 0 }}
@@ -404,6 +404,7 @@ const Index = () => {
                   loading="lazy" 
                   title="Localização Línguas Modernas"
                   className="rounded-lg shadow-md"
+                  referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
               </div>
             </div>
