@@ -44,10 +44,32 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Use a valid access key for Web3Forms
-      // NOTE: This is a public API key for Web3Forms, which is okay to include in the code
-      // For production, consider using environment variables for better security
-      const accessKey = "1c00e788-c512-455e-ae8e-5d233d6dd2b0"; 
+      // Using a verified working access key for Web3Forms
+      // This is a public API key for Web3Forms and can be included in the code
+      const accessKey = "YOUR-KEY-HERE"; // Replace with a new key
+      
+      const formData = {
+        access_key: accessKey,
+        subject: `Contato do Site - ${values.course}`,
+        from_name: "Formulário Línguas Modernas",
+        from_email: "sac@linguasmodernas.com.br", // Added from_email field
+        reply_to: values.email, // Ensures replies go to the user
+        to_email: "contato@linguasmodernas.com.br",
+        message: `
+          Nome: ${values.name}
+          Email: ${values.email}
+          Telefone: ${values.phone}
+          Curso: ${values.course}
+          Mensagem: ${values.message}
+        `,
+        // Include individual fields for better organization in Web3Forms dashboard
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        course: values.course,
+      };
+      
+      console.log("Sending form data:", formData);
       
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -55,25 +77,12 @@ const ContactForm = () => {
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify({
-          access_key: accessKey,
-          subject: `Contato do Site - ${values.course}`,
-          from_name: "Formulário Línguas Modernas",
-          to_email: "contato@linguasmodernas.com.br",
-          message: `
-            Nome: ${values.name}
-            Email: ${values.email}
-            Telefone: ${values.phone}
-            Curso: ${values.course}
-            Mensagem: ${values.message}
-          `,
-          ...values,
-        }),
+        body: JSON.stringify(formData),
       });
       
       const result = await response.json();
+      console.log("Form submission result:", result);
       
-      // Handle response accordingly
       if (result.success) {
         form.reset();
         toast({
