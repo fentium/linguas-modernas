@@ -22,6 +22,17 @@ const Navbar = () => {
     };
   }, []);
 
+  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement> | React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contato');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+      if (mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    }
+  };
+
   return (
     <header 
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
@@ -63,7 +74,10 @@ const Navbar = () => {
           <a href="#cursos" className="text-lm-blue hover:text-lm-red font-medium transition">Cursos</a>
           <a href="#depoimentos" className="text-lm-blue hover:text-lm-red font-medium transition">Depoimentos</a>
           <a href="#contato" className="text-lm-blue hover:text-lm-red font-medium transition">Contato</a>
-          <Button className="bg-lm-red hover:bg-red-700 text-white">
+          <Button 
+            className="bg-lm-red hover:bg-red-700 text-white"
+            onClick={scrollToContact}
+          >
             Agendar Aula Grátis
           </Button>
         </nav>
@@ -78,7 +92,10 @@ const Navbar = () => {
             <a href="#cursos" className="text-lm-blue hover:text-lm-red font-medium transition" onClick={() => setMobileMenuOpen(false)}>Cursos</a>
             <a href="#depoimentos" className="text-lm-blue hover:text-lm-red font-medium transition" onClick={() => setMobileMenuOpen(false)}>Depoimentos</a>
             <a href="#contato" className="text-lm-blue hover:text-lm-red font-medium transition" onClick={() => setMobileMenuOpen(false)}>Contato</a>
-            <Button className="bg-lm-red hover:bg-red-700 text-white w-full">
+            <Button 
+              className="bg-lm-red hover:bg-red-700 text-white w-full"
+              onClick={scrollToContact}
+            >
               Agendar Aula Grátis
             </Button>
           </div>

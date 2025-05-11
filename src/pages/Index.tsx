@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -9,6 +10,14 @@ import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 
 const Index = () => {
+  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement> | React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const contactSection = document.getElementById('contato');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -26,10 +35,17 @@ const Index = () => {
                 Cursos online para todo o Brasil e presenciais em Copacabana!
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-lm-red hover:bg-red-700 text-white px-6 py-6">
+                <Button 
+                  className="bg-lm-red hover:bg-red-700 text-white px-6 py-6"
+                  onClick={scrollToContact}
+                >
                   Agende uma Aula Grátis
                 </Button>
-                <Button variant="outline" className="border-lm-blue text-lm-blue hover:bg-lm-blue hover:text-white px-6 py-6">
+                <Button 
+                  variant="outline" 
+                  className="border-lm-blue text-lm-blue hover:bg-lm-blue hover:text-white px-6 py-6"
+                  onClick={scrollToContact}
+                >
                   Conheça os Cursos
                 </Button>
               </div>
@@ -56,7 +72,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center p-4 opacity-0 animate-fade-in">
-              <p className="text-3xl md:text-4xl font-bold text-lm-blue">+5000</p>
+              <p className="text-3xl md:text-4xl font-bold text-lm-blue">1200</p>
               <p className="text-gray-600">Alunos Formados</p>
             </div>
             <div className="text-center p-4 opacity-0 animate-fade-in animate-delay-300">
@@ -193,6 +209,7 @@ const Index = () => {
                 "Turmas de no máximo 6 alunos"
               ]}
               isOnline={true}
+              onSaibaMaisClick={scrollToContact}
             />
             
             <CourseCard 
@@ -210,6 +227,7 @@ const Index = () => {
                 "Simulações de situações reais"
               ]}
               isOnline={true}
+              onSaibaMaisClick={scrollToContact}
             />
             
             <CourseCard 
@@ -227,11 +245,15 @@ const Index = () => {
                 "Alto índice de aprovação"
               ]}
               isOnline={true}
+              onSaibaMaisClick={scrollToContact}
             />
           </div>
           
           <div className="mt-12 text-center">
-            <Button className="bg-lm-blue hover:bg-blue-800 text-white px-6">
+            <Button 
+              className="bg-lm-blue hover:bg-blue-800 text-white px-6"
+              onClick={scrollToContact}
+            >
               Ver Todos os Cursos
             </Button>
           </div>
@@ -259,12 +281,6 @@ const Index = () => {
                   <svg className="text-lm-blue mr-2 mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.25 4.25L6 11.5L2.75 8.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
-                  <span>Plataforma interativa e fácil de usar</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="text-lm-blue mr-2 mt-1 flex-shrink-0" width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M13.25 4.25L6 11.5L2.75 8.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
                   <span>Material didático digital completo</span>
                 </li>
                 <li className="flex items-start">
@@ -280,7 +296,10 @@ const Index = () => {
                   <span>Horários flexíveis para maior conveniência</span>
                 </li>
               </ul>
-              <Button className="bg-lm-blue hover:bg-blue-700 text-white px-6 py-4">
+              <Button 
+                className="bg-lm-blue hover:bg-blue-700 text-white px-6 py-4"
+                onClick={scrollToContact}
+              >
                 Conheça Nossos Cursos Online
               </Button>
             </div>
@@ -297,7 +316,10 @@ const Index = () => {
           <p className="text-lg mb-8 max-w-2xl mx-auto">
             Agende uma aula experimental gratuita online ou presencial e descubra como podemos ajudá-lo a alcançar fluência em inglês.
           </p>
-          <Button className="bg-white text-lm-red hover:bg-gray-100 hover:text-red-700 px-6 py-6 text-lg">
+          <Button 
+            className="bg-white text-lm-red hover:bg-gray-100 hover:text-red-700 px-6 py-6 text-lg"
+            onClick={scrollToContact}
+          >
             Agende sua Aula Grátis
           </Button>
         </div>
@@ -396,7 +418,7 @@ const Index = () => {
               
               <div className="mt-8">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.0265752061876!2d-43.19109038825815!3d-22.974699741770404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd5a3daa9829f%3A0x5eeffbfb94852c01!2sL%C3%ADnguas%20Modernas!5e0!3m2!1spt-BR!2sbr!4v1715533583919!5m2!1spt-BR!2sbr" 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.3719129992714!2d-43.18724382475373!3d-22.968459544573975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9bd5a475bc28a1%3A0xd5b9a582849c16cb!2sL%C3%ADnguas%20Modernas!5e0!3m2!1spt-BR!2sbr!4v1662566604691!5m2!1spt-BR!2sbr" 
                   width="100%" 
                   height="300" 
                   style={{ border: 0 }}

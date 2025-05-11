@@ -10,9 +10,17 @@ interface CourseCardProps {
   icon: React.ReactNode;
   features: string[];
   isOnline?: boolean;
+  onSaibaMaisClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-const CourseCard: React.FC<CourseCardProps> = ({ title, description, icon, features, isOnline = true }) => {
+const CourseCard: React.FC<CourseCardProps> = ({ 
+  title, 
+  description, 
+  icon, 
+  features, 
+  isOnline = true,
+  onSaibaMaisClick 
+}) => {
   return (
     <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-lg border-2">
       <CardHeader className="pb-2">
@@ -55,7 +63,11 @@ const CourseCard: React.FC<CourseCardProps> = ({ title, description, icon, featu
         </ul>
       </CardContent>
       <CardFooter>
-        <Button variant="outline" className="w-full border-lm-blue text-lm-blue hover:bg-lm-blue hover:text-white">
+        <Button 
+          variant="outline" 
+          className="w-full border-lm-blue text-lm-blue hover:bg-lm-blue hover:text-white"
+          onClick={onSaibaMaisClick}
+        >
           Saiba Mais
         </Button>
       </CardFooter>
