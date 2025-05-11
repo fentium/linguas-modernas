@@ -44,9 +44,9 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Using a verified working access key for Web3Forms
+      // Using the verified access key for Web3Forms provided by the user
       // This is a public API key for Web3Forms and can be included in the code
-      const accessKey = "YOUR-KEY-HERE"; // Replace with a new key
+      const accessKey = "0f13cba3-f682-4839-8ef8-bff475bc569e";
       
       const formData = {
         access_key: accessKey,
