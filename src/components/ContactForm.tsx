@@ -44,8 +44,11 @@ const ContactForm = () => {
     setIsSubmitting(true);
     
     try {
-      // In a real-world scenario, you would use a service to send emails
-      // This is a simulation of sending an email
+      // Use a valid access key for Web3Forms
+      // NOTE: This is a public API key for Web3Forms, which is okay to include in the code
+      // For production, consider using environment variables for better security
+      const accessKey = "1c00e788-c512-455e-ae8e-5d233d6dd2b0"; 
+      
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: {
@@ -53,7 +56,7 @@ const ContactForm = () => {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "YOUR_ACCESS_KEY", // Replace with actual access key if using web3forms
+          access_key: accessKey,
           subject: `Contato do Site - ${values.course}`,
           from_name: "Formulário Línguas Modernas",
           to_email: "contato@linguasmodernas.com.br",
@@ -68,15 +71,18 @@ const ContactForm = () => {
         }),
       });
       
+      const result = await response.json();
+      
       // Handle response accordingly
-      if (response.ok) {
+      if (result.success) {
         form.reset();
         toast({
           title: "Mensagem enviada com sucesso!",
           description: "Entraremos em contato em breve.",
         });
       } else {
-        throw new Error("Falha ao enviar formulário");
+        console.error("Error submitting form:", result);
+        throw new Error(result.message || "Falha ao enviar formulário");
       }
     } catch (error) {
       console.error("Error submitting form:", error);
