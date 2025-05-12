@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -228,7 +227,7 @@ const Index = () => {
           
           <div className="mt-12 text-center">
             <Button className="bg-lm-blue hover:bg-blue-800 text-white px-6" onClick={scrollToContact}>
-              Ver Todos os Cursos
+              Saiba Mais
             </Button>
           </div>
         </div>
