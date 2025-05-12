@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -5,6 +6,7 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import CourseCard from '@/components/CourseCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import ContactForm from '@/components/ContactForm';
+import AnimatedCounter from '@/components/AnimatedCounter';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin, Clock, GraduationCap, Languages, FileText } from 'lucide-react';
 
@@ -71,19 +73,27 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="text-center p-4 opacity-0 animate-fade-in">
-              <p className="text-3xl md:text-4xl font-bold text-lm-blue">1200</p>
+              <p className="text-3xl md:text-4xl font-bold text-lm-blue">
+                <AnimatedCounter end={1200} duration={2000} />
+              </p>
               <p className="text-gray-600">Alunos Formados</p>
             </div>
             <div className="text-center p-4 opacity-0 animate-fade-in animate-delay-300">
-              <p className="text-3xl md:text-4xl font-bold text-lm-blue">15+</p>
+              <p className="text-3xl md:text-4xl font-bold text-lm-blue">
+                <AnimatedCounter end={15} duration={1500} suffix="+" />
+              </p>
               <p className="text-gray-600">Anos de Experiência</p>
             </div>
             <div className="text-center p-4 opacity-0 animate-fade-in animate-delay-500">
-              <p className="text-3xl md:text-4xl font-bold text-lm-blue">98%</p>
+              <p className="text-3xl md:text-4xl font-bold text-lm-blue">
+                <AnimatedCounter end={98} duration={1800} suffix="%" />
+              </p>
               <p className="text-gray-600">Satisfação</p>
             </div>
             <div className="text-center p-4 opacity-0 animate-fade-in animate-delay-700">
-              <p className="text-3xl md:text-4xl font-bold text-lm-blue">80%</p>
+              <p className="text-3xl md:text-4xl font-bold text-lm-blue">
+                <AnimatedCounter end={80} duration={1600} suffix="%" />
+              </p>
               <p className="text-gray-600">Cursos Online</p>
             </div>
           </div>
