@@ -52,7 +52,7 @@ const ContactForm = () => {
         access_key: accessKey,
         subject: `Contato do Site - ${values.course}`,
         from_name: "Formulário Línguas Modernas",
-        from_email: "sac@linguasmodernas.com.br", // Added from_email field
+        // Removed the from_email field
         reply_to: values.email, // Ensures replies go to the user
         to_email: "contato@linguasmodernas.com.br",
         message: `
