@@ -7,6 +7,7 @@ import TestimonialCard from '@/components/TestimonialCard';
 import ContactForm from '@/components/ContactForm';
 import { Button } from '@/components/ui/button';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+
 const Index = () => {
   const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement> | React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -17,6 +18,17 @@ const Index = () => {
       });
     }
   };
+  
+  const scrollToCourses = (e: React.MouseEvent<HTMLAnchorElement> | React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const coursesSection = document.getElementById('cursos');
+    if (coursesSection) {
+      coursesSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return <div className="min-h-screen flex flex-col">
       <Navbar />
       <WhatsAppButton />
@@ -36,7 +48,7 @@ const Index = () => {
                 <Button className="bg-lm-red hover:bg-red-700 text-white px-6 py-6" onClick={scrollToContact}>
                   Agende uma Aula Grátis
                 </Button>
-                <Button variant="outline" className="border-lm-blue text-lm-blue hover:bg-lm-blue hover:text-white px-6 py-6" onClick={scrollToContact}>
+                <Button variant="outline" className="border-lm-blue text-lm-blue hover:bg-lm-blue hover:text-white px-6 py-6" onClick={scrollToCourses}>
                   Conheça os Cursos
                 </Button>
               </div>
