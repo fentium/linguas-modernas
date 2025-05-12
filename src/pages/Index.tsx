@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -6,7 +7,7 @@ import CourseCard from '@/components/CourseCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import ContactForm from '@/components/ContactForm';
 import { Button } from '@/components/ui/button';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, GraduationCap, Languages, FileText } from 'lucide-react';
 
 const Index = () => {
   const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement> | React.MouseEvent<HTMLButtonElement>) => {
@@ -169,7 +170,9 @@ const Index = () => {
       <section id="cursos" className="section-padding bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-lm-blue mb-4">Nossos Cursos</h2>
+            <a href="#cursos" onClick={scrollToCourses}>
+              <h2 className="text-3xl md:text-4xl font-bold text-lm-blue mb-4 hover:text-lm-red transition-colors">Nossos Cursos</h2>
+            </a>
             <div className="w-20 h-1 bg-lm-red mx-auto mb-6"></div>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Oferecemos cursos para todos os níveis e objetivos, com metodologia moderna e focada em resultados. A maioria dos cursos disponíveis 100% online!
@@ -188,6 +191,39 @@ const Index = () => {
             <CourseCard title="Preparação para Exames" description="Prepare-se para exames de proficiência internacionais" icon={<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-8 h-8">
                   <path d="M9 3V1M15 3V1M9 22V20M15 22V20M16 3H8C6.89543 3 6 3.89543 6 5V16C6 17.1046 6.89543 18 8 18H16C17.1046 18 18 17.1046 18 16V5C18 3.89543 17.1046 3 16 3ZM12 9H9V12H12V9ZM15 9H12V12H15V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM12 12H9V15H12V12ZM12 15H9V18H12V15ZM15 12H12V15H15V12ZM15 15H12V18H15V15ZM18 9H15V12H18V9ZM18 12H15V15H18V12ZM18 15H15V18H18V15Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>} features={["TOEFL, IELTS, Cambridge e mais", "Simulados e material exclusivo", "Técnicas específicas para cada exame", "Alto índice de aprovação"]} isOnline={true} onSaibaMaisClick={scrollToContact} />
+            
+            <CourseCard title="Preparação para Entrevista" description="Tenha confiança para encarar entrevistas em inglês com segurança" 
+                icon={<GraduationCap className="w-8 h-8" />} 
+                features={[
+                  "Prática de respostas comuns e perguntas desafiadoras", 
+                  "Técnicas para destacar suas habilidades e experiências", 
+                  "Simulações realistas com feedback personalizado", 
+                  "Orientações culturais e linguísticas para entrevistas internacionais"
+                ]} 
+                isOnline={true} 
+                onSaibaMaisClick={scrollToContact} />
+            
+            <CourseCard title="Italiano Conversacional" description="Fale com naturalidade e se conecte com a cultura italiana" 
+                icon={<Languages className="w-8 h-8" />} 
+                features={[
+                  "Foco em situações cotidianas na Itália", 
+                  "Vocabulário e expressões regionais", 
+                  "Aulas com professores nativos e fluentes", 
+                  "Turmas reduzidas para máxima interação"
+                ]} 
+                isOnline={true} 
+                onSaibaMaisClick={scrollToContact} />
+            
+            <CourseCard title="Preparação do Cidadão – Italiano" description="Domine o italiano necessário para o processo de cidadania" 
+                icon={<FileText className="w-8 h-8" />} 
+                features={[
+                  "Conteúdo voltado para exames de cidadania (B1 e outros)", 
+                  "Prática de compreensão oral e escrita", 
+                  "Simulados de entrevistas e provas oficiais", 
+                  "Aulas focadas em história, cultura e vocabulário jurídico"
+                ]} 
+                isOnline={true} 
+                onSaibaMaisClick={scrollToContact} />
           </div>
           
           <div className="mt-12 text-center">
