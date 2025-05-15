@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -191,10 +190,16 @@ const ContactForm = () => {
                   {...field}
                 >
                   <option value="">Selecione um curso</option>
-                  <option value="conversacional">Inglês Conversacional</option>
-                  <option value="negocios">Inglês para Negócios</option>
-                  <option value="exames">Preparação para Exames</option>
-                  <option value="viagem">Inglês para Viagem</option>
+                  <option value="ingles_conversacional">Inglês Conversacional</option>
+                  <option value="ingles_negocios">Inglês para Negócios</option>
+                  <option value="ingles_exames">Preparação para Exames</option>
+                  <option value="ingles_viagem">Inglês para Viagem</option>
+                  <option value="ingles_entrevista">Preparação para Entrevista</option>
+                  <option value="italiano_conversacional">Italiano Conversacional</option>
+                  <option value="italiano_cidadania">Preparação para Cidadania - Italiano</option>
+                  <option value="frances_basico">Francês Básico</option>
+                  <option value="espanhol_basico">Espanhol Básico</option>
+                  <option value="alemao_basico">Alemão Básico</option>
                   <option value="outro">Outro</option>
                 </select>
               </FormControl>
