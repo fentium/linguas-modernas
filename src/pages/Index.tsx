@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -41,7 +40,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-6 opacity-0 animate-fade-in">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-lm-blue leading-tight">
-                Aprenda Inglês com <span className="text-lm-red">Confiança</span>
+                Aprenda Línguas com <span className="text-lm-red">Confiança</span>
               </h1>
               <p className="text-lg md:text-xl text-gray-700">
                 Cursos online para todo o Brasil e presenciais em Copacabana!
