@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -23,6 +23,7 @@ const formSchema = z.object({
   phone: z.string().min(10, { message: "Telefone inválido." }),
   course: z.string().min(1, { message: "Selecione um curso." }),
   message: z.string().min(5, { message: "Mensagem precisa ter pelo menos 5 caracteres." }),
+  subject: z.string().optional(),
 });
 
 const ContactForm = () => {
@@ -37,8 +38,20 @@ const ContactForm = () => {
       phone: "",
       course: "",
       message: "",
+      subject: "",
     },
   });
+
+  // Update the subject whenever the name changes
+  const watchName = form.watch("name");
+  
+  useEffect(() => {
+    if (watchName) {
+      form.setValue("subject", `Message from ${watchName} from Webpage`);
+    } else {
+      form.setValue("subject", "Message from Website");
+    }
+  }, [watchName, form]);
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
@@ -50,7 +63,7 @@ const ContactForm = () => {
       
       const formData = {
         access_key: accessKey,
-        subject: `Contato do Site - ${values.course}`,
+        subject: values.subject || `Message from ${values.name} from Webpage`,
         from_name: "Formulário Línguas Modernas",
         // Removed the from_email field
         reply_to: values.email, // Ensures replies go to the user
@@ -108,6 +121,12 @@ const ContactForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        {/* Hidden subject field that is automatically populated */}
+        <input 
+          type="hidden" 
+          {...form.register("subject")} 
+        />
+        
         <FormField
           control={form.control}
           name="name"
