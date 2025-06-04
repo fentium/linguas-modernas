@@ -114,7 +114,7 @@ const Index = () => {
                 Na Línguas Modernas, acreditamos que aprender inglês deve ser uma jornada enriquecedora e personalizada. 
                 Desde 2008, temos ajudado nossos alunos a conquistarem fluência no idioma através de uma 
                 Desde 2008, temos ajudado nossos alunos a conquistarem fluência no idioma através de uma 
-                metodologia única e professores qualificadosxxxx.                
+                metodologia única e professores qualificados xxxx.                
               </p>
               <p className="text-blue-100">
                 Fundada pela Diretora Alessia Traversa, nosso objetivo é proporcionar um ambiente acolhedor onde cada estudante possa desenvolver suas 
